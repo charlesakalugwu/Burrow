@@ -18,4 +18,4 @@ WORKDIR /app
 COPY --from=builder /tmp/burrow /app/
 ADD /docker-config/burrow.toml /etc/burrow/
 
-CMD ["/app/burrow", "--config-dir", "/etc/burrow"]
+ENTRYPOINT ["/app/burrow", "--config-dir", "/etc/burrow"]
